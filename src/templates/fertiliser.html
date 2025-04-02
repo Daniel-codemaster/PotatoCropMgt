@@ -1,0 +1,80 @@
+{% extends 'shared/layout_base.html' %}
+{% load static %}
+
+{% block breadcrumb %} 
+    <a class="breadcrumb-item" href="/">Home</a>
+    <a class="breadcrumb-item" href="#">Add</a>
+{% endblock %}
+
+{% block main %} 
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-4 row">
+                            <label class="col-md-4">Soil type</label>
+                            <div class="col-md-8">
+                                <select class="form-select" required>
+                                    <option selected value="" disabled>Select</option>
+                                    <option>Sandy</option>
+                                    <option>Clay</option>
+                                    <option>Loam</option>
+                                    <option>Silt</option>
+                                    <option>Peat</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-4 row">
+                            <label class="col-md-4">pH</label>
+                            <div class="col-md-8">
+                                <input type="number" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="mb-4 row">
+                            <label class="col-md-4">Drainage</label>
+                            <div class="col-md-8">
+                                <select class="form-select" required>
+                                    <option selected value="" disabled>Select</option>
+                                    <option>Poor</option>
+                                    <option>Moderate Drainage</option>
+                                    <option>Well-drained</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-4 row">
+                            <label class="col-md-4">Soil color</label>
+                            <div class="col-md-8">
+                                <select class="form-select" required>
+                                    <option selected value="" disabled>Select</option>
+                                    <option>Light-brown</option>
+                                    <option>Dark-brown</option>
+                                    <option>Orange</option>
+                                    <option>Black</option>
+                                    <option>Light-gray</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-4 row">
+                            <label class="col-md-4">Soil characteristics</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-end">
+                        <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Submit</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    </div>  
+{% endblock %}
+
+
+
+
