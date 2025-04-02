@@ -1,0 +1,64 @@
+# General
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyc
+__pycache__/
+*.swp
+
+# Django specific
+*.sqlite3
+/db.sqlite3
+/db.sqlite3-journal
+/local_settings.py
+
+# Virtual environments
+venv/
+.env
+*.env
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Migrations (optional: keep in version control if needed)
+**/migrations/*.pyc
+**/migrations/*.pyo
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Node modules (if using frontend tools like React, Vue, etc.)
+node_modules/
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# Docker
+*.pid
+dist/
+
+# Logs
+logs/
+*.log
+
+# Celery
+celerybeat-schedule
+
+# Database dumps
+*.sql
+*.csv
+
+# Python virtual environment
+pip-log.txt
+pip-delete-this-directory.txt
