@@ -3,12 +3,12 @@
 
 {% block main %} 
     <div class="container">
-        <h1 class="text-center">Welcome</h3>
+        <h1 class="text-center">Welcome</h1>
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="card bg-success">
                             <div><img src="{% static '/images/fertilisers.jpg' %}" width="100%"/></div>
                             <div class="card-body">
@@ -18,7 +18,7 @@
                             </div>                          
                         </div>
                     </div>
-                   <div class="col-md-6">
+                   <div class="col-md-4">
                         <div class="card bg-primary">
                             <div><img src="{% static '/images/irrigation.jpg' %}" width="100%"/></div>
                             <div class="card-body">
@@ -28,9 +28,49 @@
                             </div>
                         </div>
                    </div>
+                   <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="">Weather Forecast</h5>
+                            <form method="get">                               
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Enter city name" name="city">
+                                    <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                </div>                               
+                            </form>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row mb-3">
+                                        <label class="text-muted">City</label>
+                                        <div class="">{{weather_data.city}} <i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="text-muted">Description</label>
+                                        <div class="">{{weather_data.description}}</div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="text-muted">Temperature</label>
+                                        <div class="">{{weather_data.temperature}}C</div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="text-muted">Humidity</label>
+                                        <div class="">{{weather_data.humidity}}%</div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="text-muted">Pressure</label>
+                                        <div class="">{{weather_data.pressure}}hPa</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="http://openweathermap.org/img/wn/{{weather_data.icon}}@2x.png" alt="weather icon">
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+               </div>
                 </div>
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-1"></div>
         </div>
     </div>
 {% endblock %}
