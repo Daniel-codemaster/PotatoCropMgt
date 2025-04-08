@@ -4,7 +4,8 @@ from django.contrib.auth.decorators import login_required
 @login_required(login_url='/identity/login')
 def index_view(request):
     context = {
-        'welcome': "Welcome"
+        'welcome': "Welcome",
+        'title': "Home"
     }
     return render(request, "index.html", context)
 
@@ -15,6 +16,7 @@ def fertilizer_pred_view(request):
     
     context = {
         'page_title': "Fertiliser prediction",
+        'title': "Fertiliser prediction",
         'breadcrumb':"Breadcrumb"
     }
     

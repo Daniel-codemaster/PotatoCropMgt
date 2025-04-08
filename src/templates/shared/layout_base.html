@@ -1,7 +1,7 @@
 {% extends 'shared/base.html' %} 
 {% load static %}
 
-{% block title %} {{section.title}} - Crop Management {% endblock %}
+{% block title %} {{title}} - PCMS {% endblock %}
 
 {% block content %}
     <div class="wrapper">
@@ -10,8 +10,19 @@
                 <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-dark fixed-top shadow-sm" style="height:68px;">                   
                     <div class="container">
                         <div class="navbar-brand">
-                            Potato Crop Management System
+                            <img src="{% static '/images/syslogo.png' %}" width="35" /> PCMS
                         </div>
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="/" class="nav-link text-white">Home</a>
+                            </li> 
+                            <li class="nav-item">
+                                <a href="/fertiliser" class="nav-link text-white">Fertiliser prediction</a>
+                            </li>                          
+                            <li class="nav-item">
+                                <a href="/irrigation" class="nav-link text-white" >Irrigation schedule</a>
+                            </li>
+                        </ul>
                         <ul class="nav justify-content-end">
                             <li class="nav-item">
                                 <a class="btn btn-sm btn-light mt-2"><i class="fa fa-user-circle"></i> {{user.first_name}} {{user.last_name}}</a>
