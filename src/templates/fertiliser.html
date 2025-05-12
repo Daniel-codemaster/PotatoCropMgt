@@ -10,6 +10,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-9">
+            {% if npk %}
+            <div class="alert alert-info" role="alert">
+                Recommended NPK: {{npk}} <br />
+                Recommended Fertiliser: {{fertilizer}}
+              </div>
+            {% endif %}
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="card">
